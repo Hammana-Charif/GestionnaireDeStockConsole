@@ -1,0 +1,65 @@
+Numéro: 1505202003
+Nom: Chorizo
+Prix: 2,6
+Quantité: 9
+
+Numéro: 1705202001
+Nom: Kinder Bueno
+Prix: 3,4
+Quantité: 18
+
+Numéro: 1705202002
+Nom: Vache Qui Rit
+Prix: 3,4
+Quantité: 17
+
+Numéro: 1705202003
+Nom: Kinder Country
+Prix: 4,1
+Quantité: 27
+
+Numéro: 1505202002
+Nom: Kinder Delice
+Prix: 6,5
+Quantité: 32
+
+Numéro: 1505202004
+Nom: Babibel
+Prix: 2,1
+Quantité: 32
+
+Numéro: 10
+Nom: Cristaline
+Prix: 10
+Quantité: 10
+
+Numéro: 1505202019
+Nom: Coulomier
+Prix: 3,2
+Quantité: 25
+
+Numéro: 1505202023
+Nom: Kinder Chocobon
+Prix: 2,6
+Quantité: 12
+
+Numéro: 1505202089
+Nom: Airboard
+Prix: 56
+Quantité: 45
+
+Numéro: 1505202014
+Nom: Galaxy Samsung
+Prix: 860
+Quantité: 10
+
+Numéro: 1505202058
+Nom: qsdqsd
+Prix: 15
+Quantité: 15
+
+Numéro: 15
+Nom: qsdqd
+Prix: 15
+Quantité: 15
+
