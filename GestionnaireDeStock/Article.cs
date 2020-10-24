@@ -83,10 +83,12 @@ namespace GestionnaireDeStock
                         string quantité = quantities;    
 
                         if (!numero.StartsWith(prefixNumero) || !nom.StartsWith(prefixNom) || !prix.StartsWith(prefixPrix) || !quantité.StartsWith(prefixquantité))
+                        {
                             throw new FormatException("Format de fichier invalide");
+                        }
                         else
                         {
-                            articles.Add(new Article()
+                            articles.Add(new Article
                             {
                                 Reference = int.Parse(references.Substring(7)),
                                 Name = names.Substring(5),

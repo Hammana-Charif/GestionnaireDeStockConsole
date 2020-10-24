@@ -2,7 +2,7 @@
 
 namespace GestionnaireDeStock
 {
-    class Menu
+    static class Menu
     {
         static Action<string> consoleWriteLine = s => Console.WriteLine(s);
         static Action<string> consoleWrite = s => Console.Write(s);

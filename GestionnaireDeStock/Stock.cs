@@ -6,8 +6,8 @@ namespace GestionnaireDeStock
 {
     class Stock
     {
-        Action<string> consoleWriteLine = s => Console.WriteLine(s);
-        Action<string> consoleWrite = s => Console.Write(s);
+        readonly Action<string> consoleWriteLine = s => Console.WriteLine(s);
+        readonly Action<string> consoleWrite = s => Console.Write(s);
 
         public string Path { get; private set; }
 
@@ -182,7 +182,9 @@ namespace GestionnaireDeStock
                 consoleWrite("Veuillez saisir le nom de l'article:");
                 string name = Console.In.ReadLine();
                 if (!Regex.IsMatch(name, @"^[a-zA-Z ]+$"))
+                {
                     throw new ArgumentException();
+                }
                 return name;
             }
             catch (ArgumentException argExcept)
@@ -275,7 +277,9 @@ namespace GestionnaireDeStock
                         consoleWrite("Voulez vous continuer votre recherche?\n(O/N):");
                         var response = Menu.AskContinue();
                         if (response == 'O')
+                        {
                             SearchForAnArticleByReference();
+                        }
                     }
                 }
             }
@@ -301,7 +305,7 @@ namespace GestionnaireDeStock
                     bool duplicate = false;
                     foreach (var article in Articles)
                     {
-                        if (article.Name.ToLower().Contains(input.ToString().ToLower()))
+                        if (article.Name.ToLowerInvariant().Contains(input.ToLowerInvariant()))
                         {
                             duplicate = true;
                             consoleWrite($"{article}");
@@ -600,11 +604,11 @@ namespace GestionnaireDeStock
                             }
                             catch (Exception except)
                             {
-                                throw new Exception($"L'erreur suivante est survenue: {except.Message}.\n");;
+                                throw new Exception($"L'erreur suivante est survenue: {except.Message}.\n");
                             }
                             return characToDelete;
                         default:
-                            break;
+                            throw new NotSupportedException();
                     }
                 }
                 else
@@ -650,9 +654,9 @@ namespace GestionnaireDeStock
         {
             var choice = Menu.AskComebackToMenu();
             if (choice == false)
+            {
                 AskAChoice();
-            else
-                return;
+            }
         }
     }
 }
